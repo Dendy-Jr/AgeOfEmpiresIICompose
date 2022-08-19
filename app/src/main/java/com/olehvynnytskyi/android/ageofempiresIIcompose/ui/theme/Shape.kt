@@ -1,4 +1,4 @@
-package com.olehvynnytskyi.android.mmogamescompose.ui.theme
+package com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

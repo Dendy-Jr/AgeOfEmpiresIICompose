@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">MMO Games Compose</string>
+    <string name="app_name">Age Of Empires II Compose</string>
+    <string name="name">name</string>
+    <string name="expansion">expansion</string>
+    <string name="army_type">army type</string>
+    <string name="unique_unit">unique unit</string>
+    <string name="unique_tech">unique tech</string>
+    <string name="team_bonus">team bonus</string>
+    <string name="civilization_bonus">civilization bonus</string>
 </resources>

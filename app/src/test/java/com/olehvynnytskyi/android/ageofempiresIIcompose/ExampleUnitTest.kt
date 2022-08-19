@@ -1,4 +1,4 @@
-package com.olehvynnytskyi.android.mmogamescompose
+package com.olehvynnytskyi.android.ageofempiresIIcompose
 
 import org.junit.Test
 

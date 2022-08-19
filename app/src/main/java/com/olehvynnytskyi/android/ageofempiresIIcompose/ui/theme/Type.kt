@@ -1,4 +1,4 @@
-package com.olehvynnytskyi.android.mmogamescompose.ui.theme
+package com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
