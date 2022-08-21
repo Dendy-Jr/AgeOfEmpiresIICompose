@@ -60,10 +60,10 @@ fun HomeScreen(
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
                 CardSection(sectionName = R.string.structures) {
-
+                    navController.navigate(Screen.Structures.route)
                 }
                 CardSection(sectionName = R.string.technologies) {
-
+                    navController.navigate(Screen.Technologies.route)
                 }
             }
         }
