@@ -28,7 +28,7 @@ fun CivilizationsScreen(
     modifier: Modifier = Modifier,
     viewModel: CivilizationsViewModel = hiltViewModel(),
 ) {
-    val mmoList by remember {
+    val civilizations by remember {
         mutableStateOf(viewModel.civilizations)
     }
 
@@ -37,7 +37,7 @@ fun CivilizationsScreen(
         color = MaterialTheme.colors.background
     ) {
         LazyColumn(modifier = modifier.fillMaxSize()) {
-            items(mmoList.value) {
+            items(civilizations.value) {
                 CivilizationItem(item = it)
             }
         }

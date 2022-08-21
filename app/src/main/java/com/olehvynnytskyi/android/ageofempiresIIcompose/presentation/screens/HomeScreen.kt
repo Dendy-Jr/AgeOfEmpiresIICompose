@@ -14,11 +14,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.olehvynnytskyi.android.ageofempiresIIcompose.R
+import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.Screen
 import com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme.FontPoppins
 
 @Composable
@@ -51,7 +51,7 @@ fun HomeScreen(
                     navController.navigate(Screen.Civilizations.route)
                 }
                 CardSection(sectionName = R.string.units) {
-
+                    navController.navigate(Screen.Units.route)
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
@@ -86,8 +86,8 @@ fun CardSection(
         ) {
             Text(
                 text = stringResource(sectionName),
-                fontFamily = FontPoppins
-                //TODO Add another font
+                fontFamily = FontPoppins,
+                fontWeight = FontWeight.Medium
             )
         }
     }

@@ -1,4 +1,4 @@
-package com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.screens
+package com.olehvynnytskyi.android.ageofempiresIIcompose.presentation
 
 sealed class Screen(val route: String) {
     object Home: Screen("home")
