@@ -1,4 +1,4 @@
-package com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses
+package com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations
 
 import com.google.gson.annotations.SerializedName
 

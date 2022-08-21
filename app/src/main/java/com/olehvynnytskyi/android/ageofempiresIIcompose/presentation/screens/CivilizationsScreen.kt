@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -17,22 +19,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.olehvynnytskyi.android.ageofempiresIIcompose.R
-import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.CivilizationItem
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.CivilizationItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.viewmodels.CivilizationsViewModel
 import java.util.*
 
 @Composable
 fun CivilizationsScreen(
     modifier: Modifier = Modifier,
-    viewModel: CivilizationsViewModel = hiltViewModel()
+    viewModel: CivilizationsViewModel = hiltViewModel(),
 ) {
     val mmoList by remember {
         mutableStateOf(viewModel.civilizations)
     }
 
-    LazyColumn(modifier = modifier.fillMaxSize()) {
-        items(mmoList.value) {
-            CivilizationItem(item = it)
+    Surface(
+        modifier = Modifier.fillMaxSize(),
+        color = MaterialTheme.colors.background
+    ) {
+        LazyColumn(modifier = modifier.fillMaxSize()) {
+            items(mmoList.value) {
+                CivilizationItem(item = it)
+            }
         }
     }
 }

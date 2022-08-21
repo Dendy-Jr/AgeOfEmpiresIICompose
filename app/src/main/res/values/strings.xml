@@ -7,4 +7,8 @@
     <string name="unique_tech">unique tech</string>
     <string name="team_bonus">team bonus</string>
     <string name="civilization_bonus">civilization bonus</string>
+    <string name="civilization">Civilizations</string>
+    <string name="units">Units</string>
+    <string name="structures">Structures</string>
+    <string name="technologies">Technologies</string>
 </resources>

@@ -1,7 +1,7 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.data
 
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api.AgeOfEmpiresIIApi
-import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.Civilizations
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.Civilizations
 import javax.inject.Inject
 import javax.inject.Singleton
 

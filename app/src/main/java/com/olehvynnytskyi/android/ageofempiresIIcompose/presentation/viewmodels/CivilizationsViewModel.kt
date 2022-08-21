@@ -4,7 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.AgeOfEmpiresIIRepository
-import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.CivilizationItem
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.CivilizationItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

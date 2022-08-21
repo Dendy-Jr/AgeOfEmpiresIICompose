@@ -1,6 +1,6 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api
 
-import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.Civilizations
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.Civilizations
 import retrofit2.http.GET
 
 interface AgeOfEmpiresIIApi {
