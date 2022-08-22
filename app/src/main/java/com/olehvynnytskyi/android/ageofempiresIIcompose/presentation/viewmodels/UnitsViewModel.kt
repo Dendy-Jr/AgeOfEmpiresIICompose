@@ -22,10 +22,7 @@ class UnitsViewModel @Inject constructor(
 
     private fun getUnits() {
         viewModelScope.launch {
-            units.value = repository.getUnits().units.sortedBy {
-                it.name
-                //TODO Move it to use case
-            }
+            units.value = repository.getUnits().units
         }
     }
 }
