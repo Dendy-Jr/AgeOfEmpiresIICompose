@@ -3,9 +3,11 @@ package com.olehvynnytskyi.android.ageofempiresIIcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.Screen
 import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.screens.*
 import com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme.AgeOfEmpiresIIComposeTheme
@@ -25,7 +27,17 @@ class MainActivity : ComponentActivity() {
                         HomeScreen(navController)
                     }
                     composable(Screen.Civilizations.route) {
-                        CivilizationsScreen()
+                        CivilizationsScreen(navHostController = navController)
+                    }
+                    composable(
+                        route = Screen.CivilizationDetails.route + "/{id}",
+                        arguments = listOf(navArgument("id") {
+                            type = NavType.IntType
+                        })
+                    ) {
+                        CivilizationDetailsScreen(
+                            id = it.arguments?.getInt("id") ?: return@composable
+                        )
                     }
                     composable(Screen.Units.route) {
                         UnitsScreen()

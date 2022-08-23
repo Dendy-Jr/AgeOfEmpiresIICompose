@@ -82,7 +82,6 @@ fun CardSection(
         Box(
             contentAlignment = Alignment.Center,
             modifier = Modifier.clickable { onClick() }
-
         ) {
             Text(
                 text = stringResource(sectionName),
