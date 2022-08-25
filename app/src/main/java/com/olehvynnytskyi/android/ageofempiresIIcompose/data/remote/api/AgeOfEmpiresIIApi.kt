@@ -4,6 +4,7 @@ import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.ci
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.Civilizations
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.Structures
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.Technologies
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.UnitItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.Units
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -24,4 +25,7 @@ interface AgeOfEmpiresIIApi {
 
     @GET("api/v1/civilization/{id}")
     suspend fun getCivilizationDetails(@Path("id") id: Int): CivilizationItem
+
+    @GET("api/v1/unit/{id}")
+    suspend fun getUnitDetails(@Path("id") id: Int): UnitItem
 }

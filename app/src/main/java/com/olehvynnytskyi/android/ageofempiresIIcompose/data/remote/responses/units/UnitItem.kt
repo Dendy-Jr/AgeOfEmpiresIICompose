@@ -1,6 +1,5 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units
 
-
 import com.google.gson.annotations.SerializedName
 
 data class UnitItem(

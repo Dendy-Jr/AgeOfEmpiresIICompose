@@ -11,4 +11,19 @@
     <string name="units">Units</string>
     <string name="structures">Structures</string>
     <string name="technologies">Technologies</string>
+    <string name="description">description</string>
+    <string name="age">age</string>
+    <string name="created_in">created in</string>
+    <string name="cost">cost</string>
+    <string name="food">Food</string>
+    <string name="gold">Gold</string>
+    <string name="build_time">build time</string>
+    <string name="reload_time">reload time</string>
+    <string name="attack_delay">attack delay</string>
+    <string name="line_of_sight">line of sight</string>
+    <string name="hit_points">hit points</string>
+    <string name="range">range</string>
+    <string name="attack">attack</string>
+    <string name="armor">armor</string>
+    <string name="attack_bonus">attack bonus</string>
 </resources>

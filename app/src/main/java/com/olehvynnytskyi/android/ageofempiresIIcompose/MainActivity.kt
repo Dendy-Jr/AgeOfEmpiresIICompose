@@ -40,7 +40,17 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable(Screen.Units.route) {
-                        UnitsScreen()
+                        UnitsScreen(navHostController = navController)
+                    }
+                    composable(
+                        route = Screen.UnitDetails.route + "/{id}",
+                        arguments = listOf(navArgument("id") {
+                            type = NavType.IntType
+                        })
+                    ) {
+                        UnitDetailsScreen(
+                            id = it.arguments?.getInt("id") ?: return@composable
+                        )
                     }
                     composable(Screen.Structures.route) {
                         StructuresScreen()

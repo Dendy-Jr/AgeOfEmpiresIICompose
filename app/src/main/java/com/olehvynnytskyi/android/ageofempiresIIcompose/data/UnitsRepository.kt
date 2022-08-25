@@ -1,6 +1,7 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.data
 
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api.AgeOfEmpiresIIApi
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.UnitItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.Units
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -11,5 +12,9 @@ class UnitsRepository @Inject constructor(
 ) {
     suspend fun getUnits(): Units {
         return api.getUnits()
+    }
+
+    suspend fun getUnitDetails(id: Int): UnitItem {
+        return api.getUnitDetails(id)
     }
 }
