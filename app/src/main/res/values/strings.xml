@@ -17,6 +17,7 @@
     <string name="cost">cost</string>
     <string name="food">Food</string>
     <string name="gold">Gold</string>
+    <string name="gold_lowercase">gold</string>
     <string name="build_time">build time</string>
     <string name="reload_time">reload time</string>
     <string name="attack_delay">attack delay</string>
@@ -26,4 +27,7 @@
     <string name="attack">attack</string>
     <string name="armor">armor</string>
     <string name="attack_bonus">attack bonus</string>
+    <string name="wood">Wood</string>
+    <string name="special">special</string>
+    <string name="stone">stone</string>
 </resources>

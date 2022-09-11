@@ -19,7 +19,8 @@ import com.olehvynnytskyi.android.ageofempiresIIcompose.core.extension.changeUrl
 fun DetailsScreenItem(
     @StringRes prefix: Int,
     item: String,
-    style: TextStyle = TextStyle()
+    style: TextStyle = TextStyle(),
+    needDivider: Boolean = true
 ) {
     Text(text = stringResource(id = prefix), fontSize = 12.sp)
     Text(
@@ -27,11 +28,13 @@ fun DetailsScreenItem(
         fontWeight = FontWeight.Medium,
         style = style
     )
-    Divider(
-        modifier = Modifier
-            .fillMaxWidth()
-            .width(1.dp)
-    )
+    if (needDivider) {
+        Divider(
+            modifier = Modifier
+                .fillMaxWidth()
+                .width(1.dp)
+        )
+    }
 }
 
 @Composable

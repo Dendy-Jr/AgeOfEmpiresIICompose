@@ -2,6 +2,7 @@ package com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api
 
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.CivilizationItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.civilizations.Civilizations
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.StructureItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.Structures
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.Technologies
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.UnitItem
@@ -28,4 +29,7 @@ interface AgeOfEmpiresIIApi {
 
     @GET("api/v1/unit/{id}")
     suspend fun getUnitDetails(@Path("id") id: Int): UnitItem
+
+    @GET("api/v1/structure/{id}")
+    suspend fun getStructureDetails(@Path("id") id: Int): StructureItem
 }

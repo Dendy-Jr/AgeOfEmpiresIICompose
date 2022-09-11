@@ -1,6 +1,7 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.data
 
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api.AgeOfEmpiresIIApi
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.StructureItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.Structures
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -12,5 +13,9 @@ class StructuresRepository @Inject constructor(
 
     suspend fun getStructures(): Structures {
         return api.getStructures()
+    }
+
+    suspend fun getStructureDetails(id: Int): StructureItem {
+        return api.getStructureDetails(id)
     }
 }

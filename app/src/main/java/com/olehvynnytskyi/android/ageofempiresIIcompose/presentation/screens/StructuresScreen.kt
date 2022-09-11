@@ -1,5 +1,6 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,14 +16,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavHostController
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.StructureItem
+import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.Screen
 import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.viewmodels.StructuresViewModel
 import com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme.FontPoppins
 
 @Composable
 fun StructuresScreen(
     modifier: Modifier = Modifier,
-    viewModel: StructuresViewModel = hiltViewModel()
+    viewModel: StructuresViewModel = hiltViewModel(),
+    navHostController: NavHostController
 ) {
 
     val structures by remember {
@@ -38,18 +42,24 @@ fun StructuresScreen(
 
             ) {
             items(structures.value) {
-                StructureItem(it)
+                StructureItem(item = it, navHostController = navHostController)
             }
         }
     }
 }
 
 @Composable
-fun StructureItem(item: StructureItem) {
+fun StructureItem(
+    item: StructureItem,
+    navHostController: NavHostController
+) {
     Card(
         modifier = Modifier
             .padding(4.dp)
-            .fillMaxSize(),
+            .fillMaxSize()
+            .clickable {
+                navHostController.navigate(Screen.StructureDetails.route + "/${item.id}")
+            },
         elevation = 10.dp
     ) {
         Text(
