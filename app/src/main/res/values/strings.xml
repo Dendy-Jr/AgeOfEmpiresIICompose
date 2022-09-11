@@ -30,4 +30,6 @@
     <string name="wood">Wood</string>
     <string name="special">special</string>
     <string name="stone">stone</string>
+    <string name="develops_in">develops in</string>
+    <string name="applies_to">applies to</string>
 </resources>

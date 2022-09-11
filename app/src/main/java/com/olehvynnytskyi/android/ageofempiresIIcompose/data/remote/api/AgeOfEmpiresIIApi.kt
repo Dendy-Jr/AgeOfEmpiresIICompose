@@ -5,6 +5,7 @@ import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.ci
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.StructureItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.structures.Structures
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.Technologies
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.TechnologyItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.UnitItem
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.units.Units
 import retrofit2.http.GET
@@ -32,4 +33,7 @@ interface AgeOfEmpiresIIApi {
 
     @GET("api/v1/structure/{id}")
     suspend fun getStructureDetails(@Path("id") id: Int): StructureItem
+
+    @GET("api/v1/technology/{id}")
+    suspend fun getTechnologyDetails(@Path("id") id: Int): TechnologyItem
 }

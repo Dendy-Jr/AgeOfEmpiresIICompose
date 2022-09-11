@@ -1,5 +1,6 @@
 package com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -15,14 +16,17 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.TechnologyItem
+import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.Screen
 import com.olehvynnytskyi.android.ageofempiresIIcompose.presentation.viewmodels.TechnologiesViewModel
 import com.olehvynnytskyi.android.ageofempiresIIcompose.ui.theme.FontPoppins
 
 @Composable
 fun TechnologiesScreen(
     modifier: Modifier = Modifier,
-    viewModel: TechnologiesViewModel = hiltViewModel()
+    viewModel: TechnologiesViewModel = hiltViewModel(),
+    navController: NavController
 ) {
     val technologies by remember {
         mutableStateOf(viewModel.technologies)
@@ -34,18 +38,22 @@ fun TechnologiesScreen(
     ) {
         LazyColumn(modifier = modifier.fillMaxSize()) {
             items(technologies.value) {
-                TechnologyItem(it)
+                TechnologyItem(item = it, navController = navController)
             }
         }
     }
 }
 
 @Composable
-fun TechnologyItem(item: TechnologyItem) {
+fun TechnologyItem(
+    item: TechnologyItem,
+    navController: NavController,
+) {
     Card(
         modifier = Modifier
             .padding(4.dp)
-            .fillMaxSize(),
+            .fillMaxSize()
+            .clickable { navController.navigate(Screen.TechnologyDetails.route + "/${item.id}") },
         elevation = 10.dp
     ) {
         Text(

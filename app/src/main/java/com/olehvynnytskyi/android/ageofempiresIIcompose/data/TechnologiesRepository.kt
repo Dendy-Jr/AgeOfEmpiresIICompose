@@ -2,6 +2,7 @@ package com.olehvynnytskyi.android.ageofempiresIIcompose.data
 
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.api.AgeOfEmpiresIIApi
 import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.Technologies
+import com.olehvynnytskyi.android.ageofempiresIIcompose.data.remote.responses.technologies.TechnologyItem
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -12,5 +13,9 @@ class TechnologiesRepository @Inject constructor(
 
     suspend fun getTechnologies(): Technologies {
         return api.getTechnologies()
+    }
+
+    suspend fun getTechnologyDetails(id: Int): TechnologyItem {
+        return api.getTechnologyDetails(id)
     }
 }
